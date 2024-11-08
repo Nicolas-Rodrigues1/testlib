@@ -7,7 +7,7 @@ import { DetachedModule } from 'ds2u-lib';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DetachedModule, CommonModule],
+  imports: [DetachedModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

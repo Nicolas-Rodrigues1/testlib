@@ -1,12 +1,14 @@
   import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-  import { provideRouter } from '@angular/router';
+  import { provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
 
   import { routes } from './app.routes';
   import { provideAnimations } from '@angular/platform-browser/animations';
 
-  export const appConfig: ApplicationConfig = {
+  export const appConfig = {
     providers: [
+      provideRouter(routes, withEnabledBlockingInitialNavigation()),
       provideAnimations(),
-      provideZoneChangeDetection({ eventCoalescing: true }), 
-      provideRouter(routes)]
+      provideZoneChangeDetection(),
+      // Outros providers que você precisar adicionar
+    ],
   };
