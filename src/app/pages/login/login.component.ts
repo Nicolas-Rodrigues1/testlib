@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthModule } from 'ds2u-lib';
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
